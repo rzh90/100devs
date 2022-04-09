@@ -3,7 +3,7 @@ fetch("https://gateway.marvel.com/v1/public/series/20607/comics?noVariants=true&
     .then(data => {
         console.log(data.data.results)
         
-        for (let i = 0; i < data.data.results.length; i++) {
+        for (let i = data.data.results.length - 1; i >= 0; i--) {
             document.querySelector(".comics").innerHTML += `<img src="${data.data.results[i].thumbnail.path}.${data.data.results[i].thumbnail.extension}">`
         }
     })
