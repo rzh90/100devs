@@ -1,0 +1,36 @@
+/* BASIC THINGS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* FONTS AND COLOURS */
+body {
+    background: #24242a;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.4rem;
+}
+h1, h2, h3, h4, h5 {
+    color: #fff;
+    font-weight: 900;
+}
+h1 {
+    font-size: 3rem;
+}
+.comics {
+    background: #2e2e35;
+}
+
+/* LAYOUT */
+.comics img {
+    width: 15%;
+}
+.comic_info {
+    border: 3px solid red;
+}
