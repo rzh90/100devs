@@ -1,4 +1,4 @@
-A list of my 100Devs projects.
+A list of my 100Devs projects
 
 API
 ---
