@@ -1,5 +1,3 @@
-100Devs Projects
-===
 A list of my 100Devs projects.
 
 API
