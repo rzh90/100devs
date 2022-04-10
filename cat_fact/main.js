@@ -17,7 +17,7 @@ function getCatFact() {
         .then(res => res.json())
         .then(apiData2 => {
             console.log(apiData2.text)
-            document.querySelector("h2").innerText = apiData2.text
+            document.querySelector(".fact").innerText = apiData2.text
         })
         .catch(err => {
             console.log(`error ${err}`)
