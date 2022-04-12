@@ -12,7 +12,12 @@ function getMeal() {
 
 
             document.querySelector("img").src = meal.strMealThumb
-            document.querySelector(".instructions").value = meal.strInstructions
+            document.querySelector("h2").innerText = meal.strMeal
+            document.querySelector("#info").innerHTML = `
+                <p>Cuisine: ${meal.strArea}</p>
+                <p>Category: ${meal.strCategory}</p>
+                <p><a href="${meal.strSource}">Source</a></p>
+                `
         })
         .catch(err => {
             console.log(`error ${err}`)

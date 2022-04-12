@@ -27,16 +27,28 @@ h2 {
     font-weight: 700;
     font-size: 2rem;
 }
+h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+p {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
 img {
     max-width: 400px;
 }
 input, .btn {
     padding: 1rem;
     background: #fff;
-    border: 1px solid #4ed1ec;
-    color: #4ed1ec;
+    border: 1px solid #f00;
+    color: #f00;
     font-weight: bold;
     font-size: 1.6rem;
     font-family: "Roboto", sans-serif;
     display: inline-block;
+    border-radius: 7px;
+}
+strong {
+    font-weight: 700;
 }
