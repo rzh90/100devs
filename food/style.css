@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+main, header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.2rem;
+}
+section {
+    padding: 1.2rem;
+}
+h1 {
+    font-weight: 900;
+    font-size: 3rem;
+}
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+img {
+    max-width: 400px;
+}
+input, .btn {
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #4ed1ec;
+    color: #4ed1ec;
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+}
