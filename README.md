@@ -6,6 +6,10 @@ API
 * [Find a Meal](https://ruinaz90.github.io/100devs/find_a_meal/)
 * [Random Cat Facts](https://ruinaz90.github.io/100devs/cat_fact/)
 
+Team Projects
+---
+* [Rock, Paper, Scissors](https://ruinaz90.github.io/100devs/rockpaperscissors/)
+
 Huntober
 ---
 * [Daily Coding Challenges](https://github.com/ruinaz90/100devs/tree/main/huntober)
