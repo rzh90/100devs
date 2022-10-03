@@ -8,4 +8,4 @@ API
 
 Huntober
 ---
-* Daily Coding Challenges
+* [Daily Coding Challenges](https://github.com/ruinaz90/100devs/tree/main/huntober)
