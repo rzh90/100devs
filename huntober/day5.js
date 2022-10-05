@@ -13,7 +13,7 @@ Here are the rules these submissions had to follow:
 /*** FUCTIONS ***/
 // No empty spaces at the start or end of the submission (my friend can't stand when people don't follow directions)
 function checkEmpty(showName) {
-    return !showName.startsWith(" ")
+    return !showName.startsWith(" ") && !showName.endsWith(" ")
 }
 
 // Cannot contain 'dog', 'bark', or 'bone' in any combination of upper or lower case (canine trolling can't be stopped)
@@ -74,7 +74,8 @@ const titlesLengthNotFive = titlesNoCanine.filter(element => lengthNotFive(eleme
 const titlesCharCodeOdd = titlesLengthNotFive.filter(element => charCodeOdd(element))
 const titlesMiddleNotE = titlesCharCodeOdd.filter(element => middleNotE(element))
 const titlesEvenLower = titlesMiddleNotE.filter(element => evenLowerCase(element))
-const finalTitles = titlesEvenLower.filter(element => twoCapitalLetters(element))
+const titlesTwoCaps = titlesEvenLower.filter(element => twoCapitalLetters(element))
+const finalTitles = titlesTwoCaps.filter(element => noCapS(element))
 
 console.log(finalTitles)
 console.log(`final count is ${finalTitles.length}`)
