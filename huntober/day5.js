@@ -17,7 +17,7 @@ function checkEmpty(showName) {
 }
 
 // Cannot contain 'dog', 'bark', or 'bone' in any combination of upper or lower case (canine trolling can't be stopped)
-function containsCanine(showName) {
+function noCanine(showName) {
     const showNameLower = showName.toLowerCase()
     return !showNameLower.includes("dog") && !showNameLower.includes("bone") && !showNameLower.includes("bark")
 }
@@ -69,7 +69,7 @@ const submissions = "The Pawshank Redemption,Caturday Night Live,Only Meworders 
 const showTitles = submissions.split(",")
 
 const titlesNotEmpty = showTitles.filter(element => checkEmpty(element))
-const titlesNoCanine = titlesNotEmpty.filter(element => containsCanine(element))
+const titlesNoCanine = titlesNotEmpty.filter(element => noCanine(element))
 const titlesLengthNotFive = titlesNoCanine.filter(element => lengthNotFive(element))
 const titlesCharCodeOdd = titlesLengthNotFive.filter(element => charCodeOdd(element))
 const titlesMiddleNotE = titlesCharCodeOdd.filter(element => middleNotE(element))
