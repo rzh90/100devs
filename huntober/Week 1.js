@@ -38,10 +38,19 @@ function reverseMessage(message) {
     return message.split("").reverse().join("")
 }
 
-const secretMessage = "e!!Igv)t5lltBcvbdeDH3dVw!OOtI#Aa.ZMDu7WYpP^VVjDc4I50iv#ylhgmQfs"
-const messageFixedChars = fixChars(secretMessage)
+function removeXChar(string, number) {
+    let letters = string.split("")
+    for(let i = number - 1; i < string.length; i += number) {
+        letters[i] = ""
+    }
+    return letters.join("")
+}
+
+const encryptedMsg = "e!!Igv)t5lltBcvbdeDH3dVw!OOtI#Aa.ZMDu7WYpP^VVjDc4I50iv#ylhgmQfs"
+const messageFixedChars = fixChars(encryptedMsg)
 const messageKeyRemoved = removeKey(messageFixedChars)
 const messageReversed = reverseMessage(messageKeyRemoved)
+const finalMessage = removeXChar(messageReversed, 3)
 
-console.log(messageReversed)
-//console.log(reverseMessage(removeKey(fixChars(secretMessage))))
+console.log(finalMessage)
+//console.log(removeXChar(reverseMessage(removeKey(fixChars(encryptedMsg))), 3))
