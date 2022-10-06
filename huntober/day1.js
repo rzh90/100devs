@@ -34,11 +34,13 @@ function fixChars(phrase) {
         "9": "q"
     }
 
-    let translatedString = ""
+    /* let translatedString = ""
     for(let i = 0; i < phrase.length; i++) {
         translatedString += replacement[phrase.charAt(i)] || phrase[i]
     }
-    return translatedString
+    return translatedString */
+
+    return phrase.split("").map(letter => letter in replacement ? replacement[letter] : letter).join("")
 }
 
 console.log(fixChars("PR0-T1P #hqB: 1T'5 N1C3 T0 5AY H3770."))
