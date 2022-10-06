@@ -39,5 +39,9 @@ function reverseMessage(message) {
 }
 
 const secretMessage = "e!!Igv)t5lltBcvbdeDH3dVw!OOtI#Aa.ZMDu7WYpP^VVjDc4I50iv#ylhgmQfs"
+const messageFixedChars = fixChars(secretMessage)
+const messageKeyRemoved = removeKey(messageFixedChars)
+const messageReversed = reverseMessage(messageKeyRemoved)
 
-console.log(fixChars(removeKey(reverseMessage(secretMessage))))
+console.log(messageReversed)
+//console.log(reverseMessage(removeKey(fixChars(secretMessage))))
