@@ -24,7 +24,7 @@ function fixChars(phrase) {
 
     let translatedString = ""
     for(let i = 0; i < phrase.length; i++) {
-        translatedString += replacement[phrase.charAt(i)] || phrase[i]
+        translatedString += replacement[phrase[i]] || phrase[i]
     }
     return translatedString
 }
@@ -46,11 +46,27 @@ function removeXChar(string, number) {
     return letters.join("")
 }
 
+function replaceWithOpposite(phrase) {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+    const alphabetReverse = "abcdefghijklmnopqrstuvwxyz".split("").reverse()
+    const alphabetKey = {}
+    for(let i = 0; i < alphabet.length; i++) {
+        alphabetKey[alphabet[i]] = alphabetReverse[i]
+        alphabetKey[alphabet[i].toUpperCase()] = alphabetReverse[i].toUpperCase()
+    }
+    
+    const letters = phrase.split("")
+    const replacedLetters = letters.map(element => element = element in alphabetKey ? alphabetKey[element] : element)
+
+    return replacedLetters.map(element => element = (element == element.toLowerCase()) ? element.toUpperCase() : element.toLowerCase()).join("")
+}
+
 const encryptedMsg = "e!!Igv)t5lltBcvbdeDH3dVw!OOtI#Aa.ZMDu7WYpP^VVjDc4I50iv#ylhgmQfs"
 const messageFixedChars = fixChars(encryptedMsg)
 const messageKeyRemoved = removeKey(messageFixedChars)
 const messageReversed = reverseMessage(messageKeyRemoved)
-const finalMessage = removeXChar(messageReversed, 3)
+const reversedMessage = removeXChar(messageReversed, 3)
+const finalMessage = replaceWithOpposite(reversedMessage)
 
 console.log(finalMessage)
-//console.log(removeXChar(reverseMessage(removeKey(fixChars(encryptedMsg))), 3))
+console.log(replaceWithOpposite(removeXChar(reverseMessage(removeKey(fixChars(encryptedMsg))), 3)))
