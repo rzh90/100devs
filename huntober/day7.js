@@ -13,20 +13,19 @@
 */
 
 function replaceWithOpposite(phrase) {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
-    const alphabetReverse = "abcdefghijklmnopqrstuvwxyz".split("").reverse()
+    const letters = "abcdefghijklmnopqrstuvwxyz"
+    
+    const alphabet = letters.split("")
+    const alphabetReverse = letters.toUpperCase().split("").reverse()
     const alphabetKey = {}
     for(let i = 0; i < alphabet.length; i++) {
         alphabetKey[alphabet[i]] = alphabetReverse[i]
-        alphabetKey[alphabet[i].toUpperCase()] = alphabetReverse[i].toUpperCase()
+        alphabetKey[alphabet[i].toUpperCase()] = alphabetReverse[i].toLowerCase()
     }
     
-    const letters = phrase.split("")
-    const replacedLetters = letters.map(letter => letter in alphabetKey ? alphabetKey[letter] : letter)
-
-    return replacedLetters.map(letter => letter == letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase()).join("")
-}
- 
+    const splitPhrase = phrase.split("")
+    return splitPhrase.map(letter => letter in alphabetKey ? alphabetKey[letter] : letter).join("")
+} 
 
 const string = "vCZNKOV: 0 MFNYVI LI KFMXGFZGRLM XSZMTVH"
 console.log(replaceWithOpposite(string))

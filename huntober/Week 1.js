@@ -47,18 +47,18 @@ function removeXChar(string, number) {
 }
 
 function replaceWithOpposite(phrase) {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
-    const alphabetReverse = "abcdefghijklmnopqrstuvwxyz".split("").reverse()
+    const letters = "abcdefghijklmnopqrstuvwxyz"
+    
+    const alphabet = letters.split("")
+    const alphabetReverse = letters.toUpperCase().split("").reverse()
     const alphabetKey = {}
     for(let i = 0; i < alphabet.length; i++) {
         alphabetKey[alphabet[i]] = alphabetReverse[i]
-        alphabetKey[alphabet[i].toUpperCase()] = alphabetReverse[i].toUpperCase()
+        alphabetKey[alphabet[i].toUpperCase()] = alphabetReverse[i].toLowerCase()
     }
     
-    const letters = phrase.split("")
-    const replacedLetters = letters.map(letter => letter in alphabetKey ? alphabetKey[letter] : letter)
-
-    return replacedLetters.map(letter => letter == letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase()).join("")
+    const splitPhrase = phrase.split("")
+    return splitPhrase.map(letter => letter in alphabetKey ? alphabetKey[letter] : letter).join("")
 }
 
 const encryptedMsg = "e!!Igv)t5lltBcvbdeDH3dVw!OOtI#Aa.ZMDu7WYpP^VVjDc4I50iv#ylhgmQfs"
