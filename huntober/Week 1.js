@@ -56,9 +56,9 @@ function replaceWithOpposite(phrase) {
     }
     
     const letters = phrase.split("")
-    const replacedLetters = letters.map(element => element = element in alphabetKey ? alphabetKey[element] : element)
+    const replacedLetters = letters.map(element => element in alphabetKey ? alphabetKey[element] : element)
 
-    return replacedLetters.map(element => element = (element == element.toLowerCase()) ? element.toUpperCase() : element.toLowerCase()).join("")
+    return replacedLetters.map(element => element == element.toLowerCase() ? element.toUpperCase() : element.toLowerCase()).join("")
 }
 
 const encryptedMsg = "e!!Igv)t5lltBcvbdeDH3dVw!OOtI#Aa.ZMDu7WYpP^VVjDc4I50iv#ylhgmQfs"

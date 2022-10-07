@@ -22,9 +22,9 @@ function replaceWithOpposite(phrase) {
     }
     
     const letters = phrase.split("")
-    const replacedLetters = letters.map(element => element = element in alphabetKey ? alphabetKey[element] : element)
+    const replacedLetters = letters.map(element => element in alphabetKey ? alphabetKey[element] : element)
 
-    return replacedLetters.map(element => element = (element == element.toLowerCase()) ? element.toUpperCase() : element.toLowerCase()).join("")
+    return replacedLetters.map(element => element == element.toLowerCase() ? element.toUpperCase() : element.toLowerCase()).join("")
 }
  
 
