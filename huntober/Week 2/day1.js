@@ -12,7 +12,22 @@ All the nested primitives within each array must strictly match to return a true
 // each of these arrays have 3 nested arrays of 3 strings each 
 
 function checkEquality(array1, array2) {
-    
+    /* METHOD 1 */
+    const flat1 = array1.flat(), flat2 = array2.flat()
+    return flat1.every((element, index) => element == flat2[index])
+
+    /* METHOD 2
+    return JSON.stringify(array1) == JSON.stringify(array2) */
+
+    /* METHOD 3
+    if(Array.isArray(array1)) {
+        for(let i = 0; i < array1.length; i++) {
+            if(!checkEquality(array1[i], array2[i]))
+                return false
+        }
+        return true
+    }
+    return array1 === array2 */
 }
 
 const arr1 = [['a','b','c'],['d','e','f'],['g','h','i']]
