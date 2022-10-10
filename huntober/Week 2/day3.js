@@ -6,7 +6,9 @@ myArr = ['hi', 'hello', 'howdy', 'hola', 'hej', 'hallo', 'heyyy']
 => ['hola', 'hallo', 'hi', 'hej', 'hello', 'howdy', 'heyyy'] */
 
 function moveFrontAndBack(array) {
-    return array.filter(element => element.toLowerCase().includes("a")).concat(array.filter(element => element.length <= 3 && !element.toLowerCase().includes("a"))).concat(array.filter(element => element.length > 3 && !element.toLowerCase().includes("a")))
+    return array.filter(element => element.toLowerCase().includes("a")) // string contains "a"
+                .concat(array.filter(element => element.length <= 3 && !element.toLowerCase().includes("a"))) // string 3 characters or less
+                .concat(array.filter(element => element.length > 3 && !element.toLowerCase().includes("a"))) // string over 3 characters
 }
 
 let myArr = ['hi', 'hello', 'howdy', 'hola', 'hej', 'hallo', 'heyyy']
