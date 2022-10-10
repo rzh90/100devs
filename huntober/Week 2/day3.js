@@ -5,11 +5,11 @@ myArr = ['hi', 'hello', 'howdy', 'hola', 'hej', 'hallo', 'heyyy']
 // move things around
 => ['hola', 'hallo', 'hi', 'hej', 'hello', 'howdy', 'heyyy'] */
 
-function moveToBack(array) {
+function moveFrontAndBack(array) {
     return array.filter(element => element.toLowerCase().includes("a")).concat(array.filter(element => element.length <= 3 && !element.toLowerCase().includes("a"))).concat(array.filter(element => element.length > 3 && !element.toLowerCase().includes("a")))
 }
 
 let myArr = ['hi', 'hello', 'howdy', 'hola', 'hej', 'hallo', 'heyyy']
 //should return ['hola', 'hallo', 'hi', 'hej', 'hello', 'howdy', 'heyyy']
 
-console.log(moveToBack(myArr))
+console.log(moveFrontAndBack(myArr))
