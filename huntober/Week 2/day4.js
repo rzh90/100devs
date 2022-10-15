@@ -8,8 +8,8 @@ function moveUp(array, value) {
     if(indexOfArray > 0) {
         const indexOfLetter = array[indexOfArray].indexOf(value)
         const temp = array[indexOfArray - 1][indexOfLetter]
-        myGrid[indexOfArray - 1][indexOfLetter] = myGrid[indexOfArray][indexOfLetter]
-        myGrid[indexOfArray][indexOfLetter] = temp
+        array[indexOfArray - 1][indexOfLetter] = array[indexOfArray][indexOfLetter]
+        array[indexOfArray][indexOfLetter] = temp
     }
 }
 
@@ -19,8 +19,8 @@ function moveDown(array, value) {
     if(indexOfArray < array.length - 1) {
         const indexOfLetter = array[indexOfArray].indexOf(value)
         const temp = array[indexOfArray + 1][indexOfLetter]
-        myGrid[indexOfArray + 1][indexOfLetter] = myGrid[indexOfArray][indexOfLetter]
-        myGrid[indexOfArray][indexOfLetter] = temp
+        array[indexOfArray + 1][indexOfLetter] = array[indexOfArray][indexOfLetter]
+        array[indexOfArray][indexOfLetter] = temp
     }
 }
 
