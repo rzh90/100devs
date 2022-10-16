@@ -199,14 +199,19 @@ const Game = () => {
     }
     
     return (
-          <div>
-            <button onClick={() => shuffleGrid()}>Shuffle</button>
-            <button onClick={() => resetGame()}>New Game</button>
+          <div className="card w-96 bg-base-100 shadow-xl border border-gray-200 p-4">
+            <div className="flex justify-center gap-2 pb-4">
+              <button className="btn btn-outline btn-info" onClick={() => resetGame()}>New Game</button>
+              <button className="btn btn-outline btn-success" onClick={() => shuffleGrid()}>Shuffle</button>
+            </div>
+        
+        <div className="flex justify-center">
             {isWin ?
-              <Winner moves={moveCount} /> :
+              <Winner moves={moveCount} /> : 
               <GameBoard onMove={(arrInd, valInd) => handleMove(arrInd, valInd)} grid={grid} />
             }
           </div>
+        </div>
     )
 }
 
