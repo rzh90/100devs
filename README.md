@@ -9,7 +9,3 @@ API
 Team Projects
 ---
 * [Rock, Paper, Scissors](https://ruinaz90.github.io/100devs/rockpaperscissors/)
-
-Huntober
----
-* [Daily Coding Challenges](https://github.com/ruinaz90/100devs/tree/main/huntober)
